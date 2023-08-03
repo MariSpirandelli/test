@@ -1,23 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { DynamicContextProvider, DynamicWidget } from '@dynamic-labs/sdk-react';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <DynamicContextProvider settings={{environmentId:'dca95954-81d8-4ef8-b20f-b1c3b6781cb6'}}>
+          <DynamicWidget/>
+        </DynamicContextProvider>
       </header>
     </div>
   );
